@@ -66,4 +66,19 @@ func main() {
 
 	fmt.Println(person)
 
+	//Type assertion
+	var ix interface{} = "hello"
+
+	s := ix.(string)
+	fmt.Println(s)
+
+	s, ok := ix.(string)
+	fmt.Println(s, ok)
+
+	f, ok := ix.(float64)
+	fmt.Println(f, ok)
+
+	f = ix.(float64) // Error
+	fmt.Println(f)
+
 }
