@@ -58,4 +58,12 @@ func main() {
 	i = "string"
 
 	describe(i) // (string, string)
+
+	person := make(map[string]interface{}, 0)
+
+	person["name"] = "Quang"
+	person["age"] = 18
+
+	fmt.Println(person)
+
 }
