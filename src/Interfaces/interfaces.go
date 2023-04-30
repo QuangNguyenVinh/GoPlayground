@@ -36,11 +36,26 @@ func measure(g geometry) {
     fmt.Println(g.area())
     fmt.Println(g.perim())
 }
-
+func describe(i interface{}) {
+	fmt.Printf("(%v, %T)\n", i, i)
+}
 func main() {
     r := rect{width: 3, height: 4}
     c := circle{radius: 5}
 
     measure(r)
     measure(c)
+
+	//Empty Inteface
+	var i interface{}
+
+	describe(i) // (nil, nil)
+
+	i = 02
+
+	describe(i) // (2, int)
+
+	i = "string"
+
+	describe(i) // (string, string)
 }
