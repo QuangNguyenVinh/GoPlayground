@@ -36,11 +36,49 @@ func measure(g geometry) {
     fmt.Println(g.area())
     fmt.Println(g.perim())
 }
-
+func describe(i interface{}) {
+	fmt.Printf("(%v, %T)\n", i, i)
+}
 func main() {
     r := rect{width: 3, height: 4}
     c := circle{radius: 5}
 
     measure(r)
     measure(c)
+
+	//Empty Inteface
+	var i interface{}
+
+	describe(i) // (nil, nil)
+
+	i = 02
+
+	describe(i) // (2, int)
+
+	i = "string"
+
+	describe(i) // (string, string)
+
+	person := make(map[string]interface{}, 0)
+
+	person["name"] = "Quang"
+	person["age"] = 18
+
+	fmt.Println(person)
+
+	//Type assertion
+	var ix interface{} = "hello"
+
+	s := ix.(string)
+	fmt.Println(s)
+
+	s, ok := ix.(string)
+	fmt.Println(s, ok)
+
+	f, ok := ix.(float64)
+	fmt.Println(f, ok)
+
+	f = ix.(float64) // Error
+	fmt.Println(f)
+
 }
