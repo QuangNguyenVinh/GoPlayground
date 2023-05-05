@@ -8,7 +8,7 @@ func mayPanic() {
 
 //A recover can stop a panic from aborting the program and let it continue with execution instead.
 func main() {
-
+	//recover must be called within a deferred function
 	defer func() {
 		if r := recover(); r != nil {
 
