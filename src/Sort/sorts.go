@@ -16,7 +16,9 @@ func main() {
 	fmt.Println("Ints:   ", ints)
 
 	fmt.Println("Sorted Ints: ", sort.IntsAreSorted(ints))
-	fmt.Println("Sorted Ints Reverse: ", sort.Reverse(sort.IntSlice(ints)))
+	sort.Sort(sort.Reverse(sort.IntSlice(ints)))
+	fmt.Println("Sorted Ints Reverse: ", ints)
 	fmt.Println("Sorted Strings: ", sort.StringsAreSorted(strs))
-	fmt.Println("Sorted Strings Reverse: ", sort.Reverse(sort.StringSlice(strs)))
+	sort.Sort(sort.Reverse(sort.StringSlice(strs)))
+	fmt.Println("Sorted Strings Reverse: ", strs)
 }
