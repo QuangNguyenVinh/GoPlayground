@@ -15,7 +15,7 @@ func main() {
 
 	fmt.Println(r.MatchString("peach"))
 
-	fmt.Println(r.FindString("peach punch"))
+	fmt.Println(r.FindString("peach punch")) //Find the first occurrence of the pattern in the string
 
 	fmt.Println("idx:", r.FindStringIndex("peach punch"))
 
