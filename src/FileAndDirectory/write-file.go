@@ -15,10 +15,10 @@ func check(e error) {
 func main() {
 
 	d1 := []byte("hello\ngo\n")
-	err := os.WriteFile("/tmp/dat1", d1, 0644)
+	err := os.WriteFile("./dat1", d1, 0644)
 	check(err)
 
-	f, err := os.Create("/tmp/dat2")
+	f, err := os.Create("./dat2")
 	check(err)
 
 	defer f.Close()
